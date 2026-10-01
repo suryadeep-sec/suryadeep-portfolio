@@ -1,81 +1,91 @@
-# Suryadeep Jadeja - Portfolio
+Suryadeep Jadeja — MERN Developer Portfolio
+My personal portfolio, built to share my projects, development skills and learning journey. I am a BCA graduate pursuing an MCA in Jamnagar, Gujarat, with a focus on MERN development and a foundation in cybersecurity.
+GitHub · LinkedIn · Email
+About the project
+This website brings my work, skills, education and contact details into one place. Each featured project includes the problem it addresses, my contributions, the technical decisions and its current status.
+The portfolio itself uses Next.js and React. It showcases MERN applications and other web projects; their application backends and databases are separate from this repository.
+Features
+- Responsive layout for mobile, tablet and desktop.
+- Dark design with lime accents and clear section navigation.
+- Featured project cards with detailed case-study dialogs.
+- Skills grouped by frontend, backend, database and supporting foundations.
+- About and education sections.
+- Downloadable PDF résumé.
+- Direct email, GitHub and LinkedIn links.
+- Copy-email action with feedback.
+- Page title, description and favicon.
+Technology stack
+Technology	Purpose
+Next.js 16	App Router, development server and production builds
+React 19	Components and interactive UI
+TypeScript	Type checking
+Tailwind CSS 4 and custom CSS	Styling and responsive layout
+Radix UI	Project dialog components
+Lucide React	Interface icons
 
-A standard Next.js portfolio that runs locally and can be deployed on Vercel. It includes the portfolio design, project details, contact links and the downloadable resume.
 
-## Run on your computer
+Featured work
+Project	Stack	What it demonstrates
+MERN Notes App	React, Node.js, Express, MongoDB	Note creation, reading, editing and deletion through a REST API
+Bajrang Travels	Next.js, TypeScript, Tailwind CSS, Supabase	Business pages, service listings, enquiries and an admin content interface
+User Management API	Node.js, Express, Mongoose, bcrypt	Registration and login fundamentals, user records and password hashing
 
-1. Extract the ZIP.
-2. Open the `suryadeep-portfolio` folder in VS Code. This is the folder containing `package.json`.
-3. Open **Terminal > New Terminal** in VS Code.
-4. Run:
 
-```bash
+Project details and available demo/source links are maintained in [`lib/portfolio.ts`](lib/portfolio.ts).
+Run locally
+Requirements: Node.js 20.9 or newer and npm.
+Clone or download this repository, then open the folder containing package.json in your terminal:
 npm install
 npm run dev
-```
+Open http://localhost:3000.
+The portfolio does not require a database connection, API keys or environment variables. Press Ctrl+C to stop the development server.
+Available commands
+Command	Purpose
+npm run dev	Start the development server
+npm run build	Create a production build
+npm start	Serve the production build
+npm run typecheck	Check TypeScript without emitting files
 
-5. Open **http://localhost:3000** in your browser.
 
-Node.js 20.9 or newer is required. Check your version with `node --version`. Node.js 22 or newer is a suitable choice for this project.
-
-Internet access is needed for the first dependency installation. After that, the portfolio can run locally. No database or API keys are needed to run this portfolio.
-
-To stop the server, press **Ctrl+C** in the terminal.
-
-## Check a production build locally
-
-```bash
+To preview the production build locally:
 npm run build
 npm start
-```
+Project structure
+Path	Contents
+app/page.tsx	Portfolio sections and interactive behavior
+app/layout.tsx	Root layout and page metadata
+app/globals.css	Colors, typography, layout and responsive styles
+components/	Shared UI and brand-icon components
+lib/portfolio.ts	Profile data and featured projects
+lib/utils.ts	Shared styling utilities
+public/	Résumé PDF and favicon
+vendor/	Vendor stylesheet and its attribution
+PORTFOLIO-ANALYSIS.md	Reference analysis and design reasoning
 
-Then open **http://localhost:3000**. You can also run `npm run typecheck` to check TypeScript.
 
-## Deploy on Vercel
-
-1. Create a GitHub repository for this portfolio.
-2. Push or upload the project contents so `package.json` is at the repository root.
-3. In Vercel, select **Add New > Project** and import that repository.
-4. Choose the **Next.js** framework preset if it is not detected automatically.
-5. Keep the project's standard build settings:
-
-| Setting | Value |
-| --- | --- |
-| Framework | Next.js |
-| Root Directory | Folder containing `package.json` |
-| Install Command | `npm install` (automatic default is also fine) |
-| Build Command | `npm run build` |
-| Output Directory | Next.js default; leave the override disabled |
-| Environment variables | None required |
-
-6. Select **Deploy**. Vercel will provide your deployed URL.
-
-The project uses Next.js directly. Its development and build scripts use Next.js's supported Webpack option. It does not require the preview hosting service used to create the first version.
-
-## Change your information
-
-| What to change | File |
-| --- | --- |
-| Email, LinkedIn, GitHub and project details | `lib/portfolio.ts` |
-| Intro, skills, education and section content | `app/page.tsx` |
-| Colors, layout and responsive styling | `app/globals.css` |
-| Browser title and description | `app/layout.tsx` |
-| Downloadable resume | `public/suryadeep-jadeja-resume.pdf` |
-| Favicon | `public/favicon.svg` |
-
-Replace the PDF using the same filename to keep existing download buttons working.
-
-## Project links
-
-The portfolio is separate from the applications described in its project cards. Notes App and User Management API currently have no supplied public repository or demo links. Add the real URLs to their project records after publishing those applications. Bajrang Travels' supplied project and source links are included; verify their availability before job outreach.
-
-Email links open the visitor's mail application. LinkedIn and GitHub links open the relevant profiles. Copy email uses the browser clipboard and shows a fallback message when clipboard access is unavailable.
-
-## Included reference analysis
-
-`PORTFOLIO-ANALYSIS.md` contains the six-reference comparison and the reasoning behind the content and layout. Vendor CSS attribution is included alongside its stylesheet.
-
-## Documentation
-
-- Next.js setup: https://nextjs.org/docs/app/getting-started/installation
-- Next.js on Vercel: https://vercel.com/docs/frameworks/full-stack/nextjs
+Personalize the content
+- Edit [`lib/portfolio.ts`](lib/portfolio.ts) to update contact links and project descriptions.
+- Edit [`app/page.tsx`](app/page.tsx) to update the introduction, skills and education.
+- Edit [`app/globals.css`](app/globals.css) to change the visual design.
+- Edit [`app/layout.tsx`](app/layout.tsx) to update the browser title and description.
+- Replace public/suryadeep-jadeja-resume.pdf with an updated résumé using the same filename.
+Deploy on Vercel
+1. Push this project to GitHub.
+2. Open Vercel and import the repository.
+3. Select Next.js as the framework preset.
+4. Use the directory containing package.json as the root directory.
+5. Keep the build command as npm run build and leave the output-directory override disabled.
+6. No environment variables are required for this portfolio.
+7. Click Deploy.
+After connecting the repository, pushes to the production branch trigger new Vercel deployments.
+Contact
+I am interested in MERN internships and junior developer opportunities.
+- Name: Suryadeep Sinh Jadeja
+- Location: Jamnagar, Gujarat, India
+- Email: rmjadeja142@gmail.com
+- LinkedIn: Suryadeep Jadeja
+- GitHub: suryadeep-sec
+References
+- Next.js documentation
+- Next.js deployment on Vercel
+- Third-party stylesheet attribution: [`vendor/shadcn-tailwind-4.13.0.LICENSE.md`](vendor/shadcn-tailwind-4.13.0.LICENSE.md)
